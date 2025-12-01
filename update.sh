@@ -19,12 +19,16 @@ fi
 npx slidev build
 
 # 清理可能存在的子目录（避免污染主页输出）
-# 如果 dist 中有 cv/ 或 nlp/ 目录，说明是之前构建留下的，需要删除
-for dir in dist/cv dist/nlp dist/slides
-do
-  if [ -d "$dir" ]; then
-    rm -rf "$dir"
-    echo "Cleaned up: $dir"
+
+# 只删除 dist 目录下 slides 目录中已存在的分类名对应的目录
+for category in $(ls slides); do
+  # 只处理目录（排除 md 文件）
+  if [ -d "slides/$category" ]; then
+    target_dir="dist/$category"
+    if [ -d "$target_dir" ]; then
+      rm -rf "$target_dir"
+      echo "Cleaned up: $target_dir"
+    fi
   fi
 done
 

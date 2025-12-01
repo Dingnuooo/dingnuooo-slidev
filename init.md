@@ -50,11 +50,11 @@ transition: fade-out
 ---
 
 # Cotents (测试中)
-- [NLP1](./nlp/chapter1)
-- [NLP2](./nlp/chapter2)
-- [CV1](./cv/chapter1)
-- [CV2](./cv/chapter2)
-- [CV3](./cv/chapter3)
+- [NLP1](./nlp/chapter1/)
+- [NLP2](./nlp/chapter2/)
+- [CV1](./cv/chapter1/)
+- [CV2](./cv/chapter2/)
+- [CV3](./cv/chapter3/)
 
 <style>
 h1 {
