@@ -19,13 +19,19 @@ fi
 npx slidev build
 
 # 清理可能存在的子目录（避免污染主页输出）
-# 如果 dist 中有 cv/ 或 nlp/ 目录，说明是之前构建留下的，需要删除
-for dir in dist/cv dist/nlp dist/slides
-do
-  if [ -d "$dir" ]; then
-    rm -rf "$dir"
-    echo "Cleaned up: $dir"
-  fi
-done
+# 删除所有匹配字母分类目录的文件夹（这些应该由 apply.sh 单独构建）
+if [ -d "dist" ]; then
+  for dir in dist/*/
+  do
+    if [ -d "$dir" ]; then
+      dirname=$(basename "$dir")
+      # 只删除符合分类命名规则的目录（纯字母、下划线、连字符）
+      if [[ "$dirname" =~ ^[a-zA-Z_-]+$ ]]; then
+        rm -rf "$dir"
+        echo "Cleaned up: $dir"
+      fi
+    fi
+  done
+fi
 
 echo "Main index page built successfully!"
