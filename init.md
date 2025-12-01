@@ -1,27 +1,22 @@
 ---
-# try also 'default' to start simple
-theme: seriph
+# You can also start simply with 'default'
+theme: academic
 # random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
 background: /cover/never-putdown-your-hammer.png
+highlighter: shiki
 # some information about your slides (markdown enabled)
-title: Dingnuooo's Slides
-info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
-
-  Learn more at [Sli.dev](https://sli.dev)
-# apply UnoCSS classes to the current slide
+title: Dingnuooo's Slide
+presenter: false
 class: text-center
 # https://sli.dev/features/drawing
 drawings:
   persist: false
 # slide transition: https://sli.dev/guide/animations.html#slide-transitions
-transition: slide-left
+transition: fade-out
 # enable MDC Syntax: https://sli.dev/features/mdc
 mdc: true
-# duration of the presentation
-duration: 35min
+layout: cover
 ---
 
 # Welcome to Slidev

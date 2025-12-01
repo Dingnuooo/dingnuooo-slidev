@@ -5,13 +5,14 @@
   "scripts": {
     "build": "bash apply-all.sh",
     "build:single": "bash apply.sh",
-    "dev": "slidev --open",
+    "dev": "slidev --open init.md",
     "export": "slidev export"
   },
   "dependencies": {
     "@slidev/cli": "^52.9.1",
     "@slidev/theme-default": "latest",
     "@slidev/theme-seriph": "latest",
+    "slidev-theme-academic": "^2.1.0",
     "vue": "^3.5.24"
   }
 }
