@@ -1,6 +1,6 @@
 [build]
 publish = "dist"
-command = "npm run build"
+command = "chmod +x *.sh && npm run build"
 
 [build.environment]
 NODE_VERSION = "20"
@@ -8,6 +8,16 @@ NODE_VERSION = "20"
 [[redirects]]
 from = "/.well-known/*"
 to = "/.well-known/:splat"
+status = 200
+
+[[redirects]]
+from = "/:category/:chapter/*"
+to = "/:category/:chapter/:splat"
+status = 200
+
+[[redirects]]
+from = "/:category/:chapter"
+to = "/:category/:chapter/index.html"
 status = 200
 
 [[redirects]]

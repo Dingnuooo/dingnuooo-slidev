@@ -3,9 +3,9 @@
 theme: seriph
 # random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
-background: https://cover.sli.dev
+background: /cover/never-putdown-your-hammer.png
 # some information about your slides (markdown enabled)
-title: Welcome to Slidev
+title: Dingnuooo's Slides
 info: |
   ## Slidev Starter Template
   Presentation slides for developers.
@@ -43,6 +43,33 @@ Presentation slides for developers
 
 <!--
 The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
+-->
+
+---
+transition: fade-out
+---
+
+# Cotents (测试中)
+- [NLP1](./nlp/chapter1)
+- [NLP2](./nlp/chapter2)
+- [CV1](./cv/chapter1)
+- [CV2](./cv/chapter2)
+- [CV3](./cv/chapter3)
+
+<style>
+h1 {
+  background-color: #2B90B6;
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
+
+<!--
+Here is another comment.
 -->
 
 ---

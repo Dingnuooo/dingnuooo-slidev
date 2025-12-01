@@ -3,7 +3,8 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "slidev build",
+    "build": "bash apply-all.sh",
+    "build:single": "bash apply.sh",
     "dev": "slidev --open",
     "export": "slidev export"
   },

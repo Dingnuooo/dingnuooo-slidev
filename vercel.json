@@ -1,7 +1,22 @@
 {
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
-  ],
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist"
+  "buildCommand": "chmod +x *.sh && npm run build",
+  "outputDirectory": "dist",
+  "routes": [
+    {
+      "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|svg|woff|woff2|ico|json|txt|mp4|webm|pdf|wasm|ttf|otf))",
+      "dest": "/$1"
+    },
+    {
+      "src": "^/([a-zA-Z_-]+)/([^/]+)/(.+)$",
+      "dest": "/$1/$2/$3"
+    },
+    {
+      "src": "^/([a-zA-Z_-]+)/([^/]+)/?$",
+      "dest": "/$1/$2/index.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
 }
