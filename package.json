@@ -5,7 +5,7 @@
   "scripts": {
     "build": "bash apply-all.sh",
     "build:single": "bash apply.sh",
-    "dev": "slidev --open init.md",
+    "dev": "slidev --open slide.md",
     "export": "slidev export"
   },
   "dependencies": {
@@ -14,5 +14,8 @@
     "@slidev/theme-seriph": "latest",
     "slidev-theme-academic": "^2.1.0",
     "vue": "^3.5.24"
+  },
+  "devDependencies": {
+    "@iconify-json/ri": "^1.2.6"
   }
 }
