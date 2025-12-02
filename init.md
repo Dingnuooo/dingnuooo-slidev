@@ -6,7 +6,7 @@ theme: academic
 background: /cover/never-putdown-your-hammer.png
 highlighter: shiki
 # some information about your slides (markdown enabled)
-title: Dingnuooo's Slide
+title: Dingnuooo's Slides
 presenter: false
 class: text-center
 # https://sli.dev/features/drawing
@@ -19,9 +19,9 @@ mdc: true
 layout: cover
 ---
 
-# Welcome to Slidev
+# Dingnuooo's Slides {.font-bold.text-sky}
 
-Presentation slides for developers
+Presentation slides by Dingnuooo
 
 <div @click="$slidev.nav.next" class="mt-12 py-1" hover:bg="white op-10">
   Press Space for next page <carbon:arrow-right />
@@ -44,12 +44,14 @@ The last comment block of each slide will be treated as slide notes. It will be 
 transition: fade-out
 ---
 
-# Cotents (测试中)
+# Cotents
 - [NLP1](https://slide.dingnuooo.top/nlp/chapter1/)
 - [NLP2](https://slide.dingnuooo.top/nlp/chapter2/)
 - [CV1](https://slide.dingnuooo.top/cv/chapter1/)
 - [CV2](https://slide.dingnuooo.top/cv/chapter2/)
 - [CV3](https://slide.dingnuooo.top/cv/chapter3/)
+- [CV AI Presentation](https://slide.dingnuooo.top/cv/ai-pre/)
+
 <style>
 h1 {
   background-color: #2B90B6;

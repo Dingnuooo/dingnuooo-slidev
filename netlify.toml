@@ -6,6 +6,11 @@ command = "chmod +x *.sh && npm run build"
 NODE_VERSION = "20"
 
 [[redirects]]
+from = "/cv/cv-final-video"
+to = "https://github.com/Dingnuooo/dingnuooo-slidev/raw/refs/heads/main/public/video.mkv?download="
+status = 302
+
+[[redirects]]
 from = "/.well-known/*"
 to = "/.well-known/:splat"
 status = 200

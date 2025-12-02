@@ -56,31 +56,3 @@ h1 + p {
 iframe {
     background: black;
 }
-
-/* 背景图片等比缩放填充，保证不留空白 */
-/*
-   使用 `background-size: cover` 来保证图片按比例缩放并填满容器，
-   同时设置居中和禁止平铺。对常见 Slidev 布局元素进行覆盖，
-   并提供 `.bg-cover` 工具类以便手动使用。
-*/
-:root,
-body,
-.slidev,
-.slidev-layout,
-.slidev-slide,
-.slidev-layout.default,
-.slidev-layout.two-cols-header {
-    background-size: cover !important;
-    -webkit-background-size: cover !important;
-    -moz-background-size: cover !important;
-    -o-background-size: cover !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-}
-
-/* 工具类：在需要的元素上手动添加 .bg-cover */
-.bg-cover {
-    background-size: cover !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-}

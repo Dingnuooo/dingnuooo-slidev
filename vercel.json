@@ -3,7 +3,14 @@
   "outputDirectory": "dist",
   "routes": [
     {
-      "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|svg|woff|woff2|ico|json|txt|mp4|webm|pdf|wasm|ttf|otf))",
+      "src": "/cv/cv-final-video",
+      "status": 302,
+      "headers": {
+        "Location": "https://github.com/Dingnuooo/dingnuooo-slidev/raw/refs/heads/main/public/video.mkv?download="
+      }
+    },
+    {
+      "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|svg|woff|woff2|ico|json|txt|mp4|mkv|webm|pdf|wasm|ttf|otf))",
       "dest": "/$1"
     },
     {
