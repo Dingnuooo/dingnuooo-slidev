@@ -37,6 +37,7 @@ class: text-left
   - Google AI Studio
   - Deepseek
   - ChatGPT
+  - Immersive Translate
 
 </v-clicks>
 
@@ -171,7 +172,7 @@ layout: default
 
 - 大量使用括号解释
 - 滥用无序/有序列表
-- **莫名其妙的加粗** (AI 经常抓不住重点)
+- 莫名其妙的加粗
 - 堆砌高级词汇
 
 </v-clicks>
@@ -183,10 +184,9 @@ layout: default
 <v-clicks>
 
 - 提示词中让大模型写成整段文字，不要使用列表
-- Copy as Markdown -> 转本地编辑器
 - 删除所有粗体，重新审视重点并标注
 - 翻译任务：先用中英混写，再过一遍AI+人工微调
-- 格式转换任务：Markdown -> LaTeX / PPT
+- 格式转换任务：Markdown 为中心
 
 </v-clicks>
 
@@ -216,7 +216,7 @@ layout: default
           <strong>Vibe Coding</strong>:
           <ul class="list-circle pl-5 mt-1 text-base opacity-80">
             <li>涉及破坏性变化之前必须物理备份 (不轻信插件的 Undo / Git)</li>
-            <li>每次交互 = 一个新版本</li>
+            <li>每次交互最好都备份</li>
           </ul>
         </li>
         <li>
@@ -224,13 +224,14 @@ layout: default
           <ul class="list-circle pl-5 mt-1 text-base opacity-80">
             <li>陌生项目：喂 <code>README.md</code></li>
             <li>无文档项目：喂文档网址</li>
+            <li>自定义：给出预期功能的描述</li>
           </ul>
         </li>
         <li>
           <strong>代码审查与 70/30 Law</strong>:
           <ul class="list-circle pl-5 mt-1 text-base opacity-80">
             <li>AI 完成 70% (界面、流程、类结构)</li>
-            <li><strong>人类承担最难的 30%</strong> (边界、异常、适配、隐蔽 Bug)</li>
+            <li><strong>人类承担最难的 30%</strong> (逻辑、边界、隐蔽 Bug 等)</li>
             <li>“知道原理的生产”和“无知状态下的生产”</li>
           </ul>
         </li>
@@ -256,44 +257,55 @@ layout: default
 <div class="grid grid-cols-2 gap-4 mt-4">
 
   <div v-click class="border p-3 rounded hover:shadow-lg transition">
-    <div class="font-bold mb-1">📊 代码绘图 (Python/Matplotlib)</div>
-    <div class="text-sm opacity-80">
+    <div class="font-bold mb-1">代码绘图 (Python/Matplotlib)</div>
+    <div class="text-bg opacity-80">
       - 使用模板库 (matplotlib-gallery)<br/>
       - AI 生成基础代码，手动微调 Customization
     </div>
   </div>
 
   <div v-click class="border p-3 rounded hover:shadow-lg transition">
-    <div class="font-bold mb-1">📐 矢量绘图 (SVG/TikZ)</div>
-    <div class="text-sm opacity-80">
-      - 适合 Logo / 几何图<br/>
-      - <b>案例:</b> SAI Logo (粗版 -> 倾斜10度 -> 加白环)<br/>
-      - <i>缺点:</i> 复杂汉字笔画难以处理
+    <div class="font-bold mb-1">生成式配图</div>
+    <div class="text-bg opacity-80">
+      - 封面图 / 复杂流程图<br/>
+      - 流程: 笔记内容+参考图+几何描述->裁剪<br/>
     </div>
   </div>
 
   <div v-click class="border p-3 rounded hover:shadow-lg transition">
-    <div class="font-bold mb-1">🎨 生成式配图</div>
-    <div class="text-sm opacity-80">
-      - 笔记封面 / 氛围图<br/>
-      - 流程: 笔记内容 + 参考图 + 几何描述 -> 裁剪<br/>
-      - <i>Ref:</i> Flipflop, Relativity-cover
-    </div>
-  </div>
-
-  <div v-click class="border p-3 rounded hover:shadow-lg transition">
-    <div class="font-bold mb-1">🔗 流程框图</div>
-    <div class="text-sm opacity-80">
-      - 简单: <b>Mermaid</b> (推荐)<br/>
+    <div class="font-bold mb-1">流程框图</div>
+    <div class="text-bg opacity-80">
+      - 简单: <b>Mermaid</b><br/>
       - 复杂: Draw.io 或生成 Figma 代码
     </div>
   </div>
 
+  <div v-click class="border p-3 rounded hover:shadow-lg transition">
+    <div class="font-bold mb-1">矢量绘图 (SVG/TikZ)</div>
+  </div>
+
+</div>
+
+<div class="grid grid-cols-2 gap-8">
+  <div class="h-full flex items-center justify-center">
+    <img 
+      src="/parameter-estimation.png" 
+      class="rounded-lg shadow-md object-cover max-h-60 w-full" 
+      alt="AI 交互示意图"
+    />
+  </div>
+  <div class="h-full flex items-center justify-center">
+    <img 
+      src="/flipflop.png" 
+      class="rounded-lg shadow-md object-cover max-h-60 w-full" 
+      alt="AI 交互示意图"
+    />
+  </div>
 </div>
 
 ---
 layout: two-cols
-layoutClass: gap-8
+layoutClass: gap-1
 ---
 
 # 3. AI 构思
@@ -301,15 +313,25 @@ layoutClass: gap-8
 
 <v-clicks>
 
-- **定义**: 从知识点中提取符合**个人认知顺序**的线索
-- **核心**: 寻找 A 到 B 的 **动机 (Motivation)**
-- **过程**:
-  1. 追问 AI 直到逻辑"丝滑"
+- 从知识点中提取符合个人认知顺序的线索
+- 寻找 A 到 B 的 动机 (Motivation)
+- 过程:
+  1. 追问 AI 直到逻辑足够丝滑
   2. AI 生成的内容通常是离散的
-  3. **人脑** 负责画连接线，构建思路
+  3. 人负责画连接线，构建思路
+- 判别式 / 生成式的选择
 
 </v-clicks>
 
+::right::
+
+<div v-click class="h-full flex items-center justify-center">
+  <img 
+    src="/lastp.png" 
+    class="rounded-lg shadow-md object-cover max-h-60 w-full" 
+    alt="AI 交互示意图"
+  />
+</div>
 
 
 
