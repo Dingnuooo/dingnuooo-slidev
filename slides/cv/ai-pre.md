@@ -19,13 +19,13 @@ fonts:
 # 大模型赋能学习 个人实践 {.font-bold.text-sky}
 ### CV presentation - Powered by Slidev
 
-<div class="abs-br m-6 flex gap-2">
-  <span class="text-sm opacity-50">CV presentation - 1120233587</span>
+<div class="abs-br m-15 flex gap-2">
+  <span class="text-base">陈功予 - 1120233587</span>
 </div>
 
 
 ---
-layout: default
+layout: two-cols
 class: text-left
 ---
 
@@ -51,9 +51,15 @@ class: text-left
 
 </v-clicks>
 
-<div v-click class="mt-12 text-xl opacity-80">
-  经典提示词估计会有人讲，所以我这里讲点别的。
+::right::
+
+<div v-click class="flex items-center justify-center h-full p-4 -ml-35">
+  <img 
+    src="/color.png" 
+    class="rounded-xl shadow-lg object-contain w-240 h-auto" 
+  />
 </div>
+
 
 ---
 layout: default
@@ -137,9 +143,6 @@ layout: default
 
 </div>
 
-<div v-click class="mt-4 text-center text-sm opacity-60">
-  相当于和精通该学科的朋友交流
-</div>
 
 ---
 layout: default
@@ -185,7 +188,7 @@ layout: default
 
 - 提示词中让大模型写成整段文字，不要使用列表
 - 删除所有粗体，重新审视重点并标注
-- 翻译任务：先用中英混写，再过一遍AI+人工微调
+- 翻译任务：先用中英混写，再过一遍AI+人工调整
 - 格式转换任务：Markdown 为中心
 
 </v-clicks>
@@ -207,21 +210,21 @@ layout: default
 
 # AI 生产：代码内容
 
-<div class="flex gap-4">
-  <div class="w-2/3">
+<div class="flex gap-4 text-lg">
+  <div class="w-1/1">
     <!-- 修复方案：使用原生 HTML 列表，配合 Tailwind 类模拟 Markdown 样式 -->
     <v-clicks>
       <ul class="list-disc pl-4 space-y-2">
         <li>
           <strong>Vibe Coding</strong>:
-          <ul class="list-circle pl-5 mt-1 text-base opacity-80">
-            <li>涉及破坏性变化之前必须物理备份 (不轻信插件的 Undo / Git)</li>
+          <ul class="list-circle pl-5 mt-1 text-lg opacity-80">
+            <li>涉及破坏性变化之前必须物理备份 (不轻信插件的 Undo)</li>
             <li>每次交互最好都备份</li>
           </ul>
         </li>
         <li>
           <strong>上下文投喂</strong>:
-          <ul class="list-circle pl-5 mt-1 text-base opacity-80">
+          <ul class="list-circle pl-5 mt-1 text-lg opacity-80">
             <li>陌生项目：喂 <code>README.md</code></li>
             <li>无文档项目：喂文档网址</li>
             <li>自定义：给出预期功能的描述</li>
@@ -229,7 +232,7 @@ layout: default
         </li>
         <li>
           <strong>代码审查与 70/30 Law</strong>:
-          <ul class="list-circle pl-5 mt-1 text-base opacity-80">
+          <ul class="list-circle pl-5 mt-1 text-lg opacity-80">
             <li>AI 完成 70% (界面、流程、类结构)</li>
             <li><strong>人类承担最难的 30%</strong> (逻辑、边界、隐蔽 Bug 等)</li>
             <li>“知道原理的生产”和“无知状态下的生产”</li>
@@ -286,7 +289,7 @@ layout: default
 
 </div>
 
-<div class="grid grid-cols-2 gap-8">
+<div v-click class="grid grid-cols-2 gap-8">
   <div class="h-full flex items-center justify-center">
     <img 
       src="/parameter-estimation.png" 
@@ -314,10 +317,10 @@ layoutClass: gap-1
 <v-clicks>
 
 - 从知识点中提取符合个人认知顺序的线索
-- 寻找 A 到 B 的 动机 (Motivation)
+- 寻找 A 到 B 的 动机
 - 过程:
   1. 追问 AI 直到逻辑足够丝滑
-  2. AI 生成的内容通常是离散的
+  2. 发散多数知识点，时常回顾这些知识
   3. 人负责画连接线，构建思路
 - 判别式 / 生成式的选择
 
