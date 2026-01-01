@@ -57,7 +57,7 @@ class: text-left
   <img 
     src="/color.png" 
     class="rounded-xl shadow-lg object-contain w-240 h-auto" 
-  />
+  />                                                              
 </div>
 
 

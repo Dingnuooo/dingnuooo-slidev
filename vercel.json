@@ -3,7 +3,11 @@
   "outputDirectory": "dist",
   "routes": [
     {
-      "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|svg|woff|woff2|ico|json|txt|mp4|webm|pdf|wasm|ttf|otf))",
+      "src": "/cv-final-video",
+      "dest": "/video.mkv"
+    },
+    {
+      "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|svg|woff|woff2|ico|json|txt|mp4|mkv|webm|pdf|wasm|ttf|otf))",
       "dest": "/$1"
     },
     {
