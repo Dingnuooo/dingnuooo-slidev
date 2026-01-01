@@ -7,8 +7,8 @@ NODE_VERSION = "20"
 
 [[redirects]]
 from = "/cv/cv-final-video"
-to = "/video.mkv"
-status = 200
+to = "https://github.com/Dingnuooo/dingnuooo-slidev/raw/refs/heads/main/public/video.mkv?download="
+status = 302
 
 [[redirects]]
 from = "/.well-known/*"
