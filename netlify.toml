@@ -6,7 +6,7 @@ command = "chmod +x *.sh && npm run build"
 NODE_VERSION = "20"
 
 [[redirects]]
-from = "/cv-final-video"
+from = "/cv/cv-final-video"
 to = "/video.mkv"
 status = 200
 

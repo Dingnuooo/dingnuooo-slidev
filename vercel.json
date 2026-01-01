@@ -3,7 +3,7 @@
   "outputDirectory": "dist",
   "routes": [
     {
-      "src": "/cv-final-video",
+      "src": "/cv/cv-final-video",
       "dest": "/video.mkv"
     },
     {
