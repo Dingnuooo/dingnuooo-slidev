@@ -279,7 +279,7 @@ layout: default
     <div class="font-bold mb-1">流程框图</div>
     <div class="text-bg opacity-80">
       - 简单: <b>Mermaid</b><br/>
-      - 复杂: Draw.io 或生成 Figma 代码
+      - 复杂: Draw.io
     </div>
   </div>
 
@@ -328,7 +328,7 @@ layoutClass: gap-1
 
 ::right::
 
-<div v-click class="h-full flex items-center justify-center">
+<div v-click class="h-full flex items-center justify-center -ml-18">
   <img 
     src="/lastp.png" 
     class="rounded-lg shadow-md object-cover max-h-60 w-full" 
