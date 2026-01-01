@@ -7,7 +7,7 @@ NODE_VERSION = "20"
 
 [[redirects]]
 from = "/cv/cv-final-video"
-to = "/public/video.mkv"
+to = "/video.mkv"
 status = 200
 
 [[redirects]]
