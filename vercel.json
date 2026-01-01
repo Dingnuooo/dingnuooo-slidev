@@ -4,7 +4,7 @@
   "routes": [
     {
       "src": "/cv/cv-final-video",
-      "dest": "/video.mkv"
+      "dest": "/public/video.mkv"
     },
     {
       "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|svg|woff|woff2|ico|json|txt|mp4|mkv|webm|pdf|wasm|ttf|otf))",
